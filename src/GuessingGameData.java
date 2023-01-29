@@ -2,6 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessingGameData {
+
     int generateRandomNumber(int minNumber, int maxNumber){
         //Generates the random number
         Random randomNumber = new Random();
