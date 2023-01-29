@@ -26,16 +26,19 @@ public class GuessingGameData {
                 System.out.print("Your guess is not between " + minNumber + " and " + maxNumber + " .Please try again.");
             }
             else {
-                if (guessingOpportunities == 0) {
-                    System.out.println("You lose!, the number to guess was: " + numberToGuess);
-                    break;
-                } else if (userChoiceNumber == numberToGuess) {
+                if (userChoiceNumber == numberToGuess) {
                     System.out.print("You Win!!!");
                     break;
-                } else if (userChoiceNumber < numberToGuess) {
+                }
+                else if (guessingOpportunities == 0) {
+                    System.out.println("You lose!, the number to guess was: " + numberToGuess);
+                    break;
+                }
+                else if (userChoiceNumber < numberToGuess) {
                     System.out.print("Please pick a higher number");
                     guessingOpportunities--;
-                } else if (userChoiceNumber > numberToGuess) {
+                }
+                else if (userChoiceNumber > numberToGuess) {
                     System.out.print("Please pick a lower number.");
                     guessingOpportunities--;
                 }
