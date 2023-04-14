@@ -6,10 +6,10 @@ public class GuessingGame {
         //guessing opportunities
         int guessingOpportunities = 4;
         //creating my object
-        GuessingGameData number = new GuessingGameData();
+        GuessingGameService numberGameService = new GuessingGameService();
         //creating my number to guess
-        int numberToGuess = number.generateRandomNumber(minNumber,maxNumber);
+        int numberToGuess = numberGameService.generateRandomNumber(minNumber,maxNumber+1);
         //guessing the number
-        number.guessingNumber(minNumber,maxNumber,number,guessingOpportunities,numberToGuess);
+        numberGameService.startGuessingGame(minNumber,maxNumber,guessingOpportunities,numberToGuess);
     }
 }
